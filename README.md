@@ -1,13 +1,13 @@
-# Introduction to scripting - Sistemas Interactivos
+# Introduction to scripting - Interactive Systems
 
 ## Universidad Pompeu Fabra (UPF) 2020
 
-**Alumno**: David Ciria Mayordomo <br/>
+**Student**: David Ciria Mayordomo <br/>
 **NIA:** 206038 <br/>
-**Usuario:** U150281 <br/>
+**User:** U150281 <br/>
 **Email:** david.ciria01@estudiant.upf.edu <br/>
 
-## Mejoras añadidas
+## Added improvements
 
 * A heart appears when you destroy a sheep.
 * Sounds added (when hay bale is shooted, when a sheep dies and when a sheep falls).
