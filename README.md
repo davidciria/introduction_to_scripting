@@ -9,7 +9,7 @@
 
 ## Mejoras añadidas
 
-* A heart appears when you destroy a sheep
+* A heart appears when you destroy a sheep.
 * Sounds added (when hay bale is shooted, when a sheep dies and when a sheep falls).
 * Keepping score (Counter of dead sheep and falling sheep).
 * Title screen added (start and quit button with some animations).
