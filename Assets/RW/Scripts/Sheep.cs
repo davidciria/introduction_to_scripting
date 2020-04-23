@@ -8,6 +8,18 @@ public class Sheep : MonoBehaviour
     public float gotHayDestroyDelay;
     private bool hitByHay;
 
+    public float dropDestroyDelay; // 1
+    private Collider myCollider; // 2
+    private Rigidbody myRigidbody;
+
+    private SheepSpawner sheepSpawner;
+
+    void Start()
+    {
+        myCollider = GetComponent<Collider>();
+        myRigidbody = GetComponent<Rigidbody>();
+    }
+
     void Update()
     {
         transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
@@ -19,14 +31,31 @@ public class Sheep : MonoBehaviour
         {
             Destroy(other.gameObject); // 3
             HitByHay(); // 4
+        } else if (other.CompareTag("DropSheep"))
+        {
+            Drop();
         }
     }
 
     private void HitByHay()
     {
+        sheepSpawner.RemoveSheepFromList(gameObject);
         hitByHay = true; // 1
         runSpeed = 0; // 2
         Destroy(gameObject, gotHayDestroyDelay); // 3
+    }
+
+    private void Drop()
+    {
+        sheepSpawner.RemoveSheepFromList(gameObject);
+        myRigidbody.isKinematic = false; // 1
+        myCollider.isTrigger = false; // 2
+        Destroy(gameObject, dropDestroyDelay); // 3
+    }
+
+    public void SetSpawner(SheepSpawner spawner)
+    {
+        sheepSpawner = spawner;
     }
 
 }
