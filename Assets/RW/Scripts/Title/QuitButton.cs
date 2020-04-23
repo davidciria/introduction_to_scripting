@@ -8,6 +8,6 @@ public class QuitButton : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData) // 1
     {
-        SceneManager.LoadScene("Game"); // 2
+        Application.Quit();
     }
 }
